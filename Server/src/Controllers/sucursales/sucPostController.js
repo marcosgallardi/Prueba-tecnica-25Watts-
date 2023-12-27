@@ -1,7 +1,7 @@
-const {sucursales} = require('../../db')
+const {Sucursales} = require('../../db')
 
-const sucursalPostController = async(name,ciudad,direccion,imagen) =>{
-  const create =  await sucursales.create({
+const sucPostController = async(name,ciudad,direccion,imagen) =>{
+  const create =  await Sucursales.create({
         name,
         ciudad,
         direccion,
@@ -11,4 +11,4 @@ const sucursalPostController = async(name,ciudad,direccion,imagen) =>{
     return create
 }
 
-module.exports = sucursalPostController;
+module.exports = sucPostController;
