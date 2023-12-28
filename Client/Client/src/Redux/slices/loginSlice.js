@@ -8,13 +8,16 @@ const loginSlice = createSlice({
   name: "login",
   initialState,
   reducers: {
-    setUser: (state, { payload }) => {
+    setLogin: (state, { payload }) => {
+      state.loged = payload;
+    },
+    setLogout:(state, { payload }) => {
       state.loged = payload;
     },
   },
 });
 
 
-export const { setUser } = loginSlice.actions;
+export const { setLogin,setLogout } = loginSlice.actions;
 
 export default loginSlice.reducer;

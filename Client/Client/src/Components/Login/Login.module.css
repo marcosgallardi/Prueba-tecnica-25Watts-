@@ -4,10 +4,29 @@
   border-radius: 17px;
   border-color: rgba(0, 0, 0, 0.355);
   margin-bottom: 10px;
+  padding-left: 15px;
+}
+.inputLogin2{
+  width: 350px;
+  height: 40px;
+  border-radius: 17px;
+  border-color: rgba(0, 0, 0, 0.355);
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+.heigthLogs{
+  height: 45px;
 }
 .textLogin {
   color: #853ab6;
   font-size: 15px;
-  font-weight:650;
+  font-weight: 650;
   text-align: end;
+}
+
+.crearCuenta {
+  color: #853ab6;
+  font-size: 18px;
+  font-weight: 650;
+  text-decoration: none;
 }

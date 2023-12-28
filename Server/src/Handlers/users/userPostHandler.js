@@ -32,7 +32,7 @@ const userPostHandler = async (req, res) => {
       message: "Error al crear el usuario",
     });
 
-    throw new Error(error.message);
+    throw new Error(error);
   }
 };
 
