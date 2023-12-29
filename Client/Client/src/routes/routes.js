@@ -1,4 +1,4 @@
-import { SucursalesPage, LoginPage, RegisterPage, SaldoPage } from "../pages";
+import { SucursalesPage, LoginPage, RegisterPage, SaldoPage,SaldoDetailPage } from "../pages";
 
 export const routes = [
   {
@@ -25,4 +25,10 @@ export const routes = [
     Component: SucursalesPage,
     name: "Sucursales",
   },
+  {
+    to: "/saldoDetail",
+    path: "/saldoDetail/*",
+    Component: SaldoDetailPage,
+    name: "saldoDetail",
+  }
 ];

@@ -1,0 +1,72 @@
+.containerSaldoDetail {
+  position: absolute;
+  top: 125px;
+}
+
+.containerCardDetail {
+  position: absolute;
+  left: 27px;
+}
+
+.nombreCardDetail {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: aliceblue;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.containerCardDetail1 {
+  position: absolute;
+  left: 227px;
+}
+
+
+
+.PositionFooter {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+.PositionButtonSald {
+  position: absolute;
+  top: 520px;
+  left: 20px;
+}
+.PositionButtonSald1{
+    position: absolute;
+    top: 200px;
+    left: 820px;
+}
+
+.containerText {
+  border: rgba(128, 128, 128, 0.315) 2px solid;
+  border-radius: 15px;
+  position: absolute;
+  top: 250px;
+  left: 27px;
+  width: 330px;
+}
+.containerText1 {
+  border: rgba(128, 128, 128, 0.315) 2px solid;
+  border-radius: 15px;
+  position: absolute;
+  top: 250px;
+  left: 227px;
+  width: 330px;
+}
+
+.imgDetail1 {
+  width: 25px;
+  height: 25px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.imgDetail2 {
+  width: 20px;
+  height: 25px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
