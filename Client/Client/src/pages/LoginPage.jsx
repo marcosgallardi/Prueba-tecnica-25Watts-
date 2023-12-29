@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { LoadingLogin } from "../Components/LoadingLogin/LoadingLogin";
-import { LoginMovil } from "../Components/Login/LoginMovil";
-import { LoginDesktop } from "../Components/Login/LoginDesktop";
+import { LoginMovil, LoginDesktop } from "../Components/Login";
+
 import styles from "./pages.module.css";
 
 export const LoginPage = () => {
@@ -13,8 +13,6 @@ export const LoginPage = () => {
 
     return () => clearTimeout(timer);
   }, []);
-
- 
 
   return (
     <>

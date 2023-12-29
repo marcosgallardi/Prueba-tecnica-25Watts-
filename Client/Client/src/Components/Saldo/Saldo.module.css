@@ -1,0 +1,84 @@
+.containerSaldo {
+  position: absolute;
+  top: 125px;
+}
+
+.containerCardAmar {
+  position: relative;
+  background-image: url("../../assets/images/amarillo.png");
+  width: 180px;
+  height: 120px;
+  margin-left: 10px;
+}
+
+.containerCardRojo {
+  position: relative;
+  background-image: url("../../assets/images/red.png");
+  width: 180px;
+  height: 120px;
+  margin-left: 10px;
+}
+
+.containerCardVerde {
+  position: relative;
+  background-image: url("../../assets/images/verde.png");
+  width: 180px;
+  height: 120px;
+  margin-left: 10px;
+}
+
+.containerCardAzul {
+  position: relative;
+  background-image: url("../../assets/images/azul.png");
+  width: 180px;
+  height: 120px;
+  margin-left: 10px;
+}
+
+.nombreCard {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  color: aliceblue;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.textSelecciona {
+  padding-left: 10px;
+  font-size: 21px;
+}
+
+.PositionButtonSald {
+  position: absolute;
+  top: 545px;
+  left: 20px;
+}
+
+.PositionFooter {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.barGradient {
+  background: #853ab6;
+  background: -webkit-linear-gradient(to right, #843ab6b0, #abd4f2a7);
+  background: linear-gradient(to right, #843ab6b0, #abd4f2a7);
+  border-radius: 30px 30px 0 0;
+  width: 100%;
+  height: 20px;
+  position: relative;
+}
+
+.ButtonQR {
+  position: absolute;
+  top: 0px;
+  right: 180px;
+  border-radius: 100%;
+  padding: 19px;
+  background: #853ab6;
+  background: -webkit-linear-gradient(to bottom, #a74ee0, #853ab6);
+  background: linear-gradient(to bottom, #a74ee0, #853ab6);
+  border: 0cap;
+}
