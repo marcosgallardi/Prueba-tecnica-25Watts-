@@ -9,7 +9,23 @@
   color: aliceblue;
   font-weight: 500;
   font-size: 18px;
-  box-shadow:0px 4px 10px #853ab6;
+  box-shadow: 0px 4px 10px #853ab6;
   /* me gusto mas estas sombras que las del diseño :D */
 }
 
+.MainBotton2 {
+  width: 350px;
+  height: 53px;
+  border-radius: 25px;
+  border: 0cap;
+  background: #853ab6;
+  background: -webkit-linear-gradient(to bottom, #a74ee0, #853ab6);
+  background: linear-gradient(to bottom, #a74ee0, #853ab6);
+  color: aliceblue;
+  font-weight: 500;
+  font-size: 18px;
+  box-shadow: 0px 4px 10px #853ab6;
+  text-decoration: none;
+
+  /* me gusto mas estas sombras que las del diseño :D */
+}

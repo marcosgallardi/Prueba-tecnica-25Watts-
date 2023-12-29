@@ -1,5 +1,5 @@
 import { Card } from "./Card";
-import agregar from "../../assets/images/tarjetaagregar.png"
+import agregar from "../../assets/images/tarjetaagregar.png";
 
 export const CardContainer = () => {
   let mockCard = [
@@ -25,35 +25,33 @@ export const CardContainer = () => {
       color: "verde",
     },
     {
-        nombre: "mateo",
-        apellido: "",
-        saldo: 200,
-        tickets: 2000,
-        color: "azul",
-      },
+      nombre: "mateo",
+      apellido: "",
+      saldo: 200,
+      tickets: 2000,
+      color: "azul",
+    },
   ];
 
   return (
     <div className="pt-4">
       <div className="row">
-        {mockCard.map(({ index, nombre, apellido, saldo, tickets, color }) => {
+        {mockCard.map(({ nombre, apellido, saldo, tickets, color }) => {
           return (
-            <>
-              <div className="col-5 ms-2">
-                <Card
-                  key={index}
-                  nombre={nombre}
-                  apellido={apellido}
-                  saldo={saldo}
-                  tickets={tickets}
-                  color={color}
-                />
-              </div>
-            </>
+            <div className="col-5 ms-2" key={nombre}>
+              <Card
+                key={nombre}
+                nombre={nombre}
+                apellido={apellido}
+                saldo={saldo}
+                tickets={tickets}
+                color={color}
+              />
+            </div>
           );
         })}
         <div className="col-5 ms-4 ps-3 pt-2">
-            <img src={agregar} alt="" />
+          <img src={agregar} alt="" />
         </div>
       </div>
     </div>

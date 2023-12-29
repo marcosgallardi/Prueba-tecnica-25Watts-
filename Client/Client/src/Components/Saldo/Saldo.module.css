@@ -55,6 +55,12 @@
   left: 20px;
 }
 
+.PositionButtonSald1 {
+  position: absolute;
+  top: 400px;
+  left: 940px;
+}
+
 .PositionFooter {
   position: fixed;
   bottom: 0px;
@@ -74,11 +80,28 @@
 .ButtonQR {
   position: absolute;
   top: 0px;
-  right: 180px;
+  right: 165px;
   border-radius: 100%;
   padding: 19px;
   background: #853ab6;
   background: -webkit-linear-gradient(to bottom, #a74ee0, #853ab6);
   background: linear-gradient(to bottom, #a74ee0, #853ab6);
   border: 0cap;
+}
+
+.ButtonQR2 {
+  position: absolute;
+  top: 0px;
+  right: 770px;
+  border-radius: 100%;
+  padding: 19px;
+  background: #853ab6;
+  background: -webkit-linear-gradient(to bottom, #a74ee0, #853ab6);
+  background: linear-gradient(to bottom, #a74ee0, #853ab6);
+  border: 0cap;
+}
+
+.selected {
+  border: 2px solid #a74ee0;
+  border-radius: 5px;
 }
