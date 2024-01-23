@@ -14,12 +14,13 @@ import { useEffect, useState } from "react";
 export const LoginMovil = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { email, password, onInputChange, formState, onResetForm } = useForm({
-    email: "",
-    password: "",
-  });
+  const { email, password, onInputChange, formState, onResetForm, validation } =
+    useForm({
+      email: "",
+      password: "",
+    });
+
   const [anchoVentana, setAnchoVentana] = useState(window.innerWidth);
-  console.log(anchoVentana);
 
   useEffect(() => {
     const actualizarAnchoVentana = () => {
@@ -41,6 +42,22 @@ export const LoginMovil = () => {
         alert("Todos los campos son obligatorios");
         return;
       }
+      console.log(validation);
+      if (
+        validation.email === "Dirección de email incorrecta" ||
+        validation.password ===
+          "La contraseña no cumple con al menos una mayuscula, al menos una minuscula,  al menos una un numero y un simbolo"
+      ) {
+        if (validation.email) {
+          alert(validation.email);
+        }
+        if (validation.password) {
+          alert(validation.password);
+        }
+        return;
+      }
+      console.log(validation);
+
       const login = await dispatch(
         loginAction(formState.email, formState.password)
       );
