@@ -6,7 +6,7 @@
   margin-bottom: 10px;
   padding-left: 15px;
 }
-.inputLogin2{
+.inputLogin2 {
   width: 350px;
   height: 40px;
   border-radius: 17px;
@@ -14,8 +14,14 @@
   margin-bottom: 10px;
   padding-left: 15px;
 }
-.heigthLogs{
+.heigthLogs {
   height: 45px;
+}
+.heigthLogs1 {
+  height: 45px;
+}
+.heigthLogs2 {
+  height: 10px;
 }
 .textLogin {
   color: #853ab6;
