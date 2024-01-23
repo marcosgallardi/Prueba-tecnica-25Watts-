@@ -9,8 +9,7 @@ import google from "../../assets/images/google.png";
 import apple from "../../assets/images/apple.png";
 import { loginAction } from "../../Redux/actions/loginAction";
 import { Input } from "../Input/Input";
-
-//componente con estilos de bootstrap
+import { useEffect, useState } from "react";
 
 export const LoginMovil = () => {
   const dispatch = useDispatch();
@@ -19,10 +18,29 @@ export const LoginMovil = () => {
     email: "",
     password: "",
   });
+  const [anchoVentana, setAnchoVentana] = useState(window.innerWidth);
+  console.log(anchoVentana);
+
+  useEffect(() => {
+    const actualizarAnchoVentana = () => {
+      setAnchoVentana(window.innerWidth);
+    };
+
+    window.addEventListener("resize", actualizarAnchoVentana);
+
+    return () => {
+      window.removeEventListener("resize", actualizarAnchoVentana);
+    };
+  }, []);
 
   const onSubmit = async (e) => {
     try {
       e.preventDefault();
+
+      if (formState.email === "" || formState.password === "") {
+        alert("Todos los campos son obligatorios");
+        return;
+      }
       const login = await dispatch(
         loginAction(formState.email, formState.password)
       );
@@ -40,21 +58,45 @@ export const LoginMovil = () => {
       throw error.message;
     }
   };
-
+  const alturaEstilo =
+    (anchoVentana >= 350) & (anchoVentana < 390) ? "35px" : "45px";
   return (
     <>
-      <div className="position-absolute top-25 start-50 translate-middle-x pt-4">
+      <div
+        className={
+          anchoVentana > 700
+            ? "position-absolute top-50 start-50 translate-middle pt-5"
+            : "position-absolute top-25 start-50 translate-middle-x pt-4"
+        }>
         <div className="d-flex justify-content-center">
-          <img src={logo1} alt="" />
+          <img
+            src={logo1}
+            alt=""
+            className={
+              (anchoVentana >= 350) & (anchoVentana < 390) ? "w-25" : "w-50"
+            }
+          />
         </div>
-        <h3 className="text-center pt-4">Iniciar sesión</h3>
-        <form className="pt-1" onSubmit={onSubmit}>
+        <h3
+          className={
+            (anchoVentana >= 350) & (anchoVentana < 500)
+              ? "text-center pt-2 fs-5"
+              : "text-center pt-4"
+          }>
+          Iniciar sesión
+        </h3>
+        <form
+          className={
+            (anchoVentana >= 350) & (anchoVentana < 500) ? "pt-1" : "pt-5"
+          }
+          onSubmit={onSubmit}>
           <Input
             label={"E-mail"}
             type="text"
             name="email"
             value={email}
             onChange={onInputChange}
+            heigth={alturaEstilo}
           />
 
           <Input
@@ -63,14 +105,32 @@ export const LoginMovil = () => {
             name="password"
             value={password}
             onChange={onInputChange}
+            heigth={alturaEstilo}
           />
           <p className={styles.textLogin}>¿Olvidaste tu contraseña?</p>
-          <div className="d-flex justify-content-center pt-4">
-            <MainButton name={"Ingresar"} />
+          <div
+            className={
+              (anchoVentana >= 350) & (anchoVentana < 500)
+                ? "d-flex justify-content-center pt-2"
+                : "d-flex justify-content-center pt-4"
+            }>
+            <MainButton
+              name={"Ingresar"}
+              size={
+                (anchoVentana >= 350) & (anchoVentana < 390)
+                  ? { width: "300px", height: "40px" }
+                  : ""
+              }
+            />
           </div>
         </form>
 
-        <div className="row pt-4">
+        <div
+          className={
+            (anchoVentana >= 350) & (anchoVentana < 500)
+              ? "row pt-2"
+              : "row pt-4"
+          }>
           <div className="col-4">
             <hr className={styles.hr} />
           </div>
@@ -94,7 +154,12 @@ export const LoginMovil = () => {
           </div>
         </div>
 
-        <p className="text-center pt-3 fs-5">
+        <p
+          className={
+            (anchoVentana >= 350) & (anchoVentana < 500)
+              ? "text-center pt-1 fs-6"
+              : `text-center pt-3 fs-5`
+          }>
           ¿No estás registrado?{" "}
           <Link className={styles.crearCuenta} to={"/registro"}>
             Crear una cuenta{" "}
