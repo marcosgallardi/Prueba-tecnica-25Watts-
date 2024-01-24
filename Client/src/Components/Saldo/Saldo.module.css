@@ -2,13 +2,16 @@
   position: absolute;
   top: 125px;
 }
+.containerSaldo1 {
+  position: absolute;
+  top: 70px;
+}
 
 .containerCardAmar {
   position: relative;
   background-image: url("../../assets/images/amarillo.png");
   width: 180px;
   height: 120px;
-  margin-left: 10px;
 }
 
 .containerCardRojo {
@@ -16,7 +19,6 @@
   background-image: url("../../assets/images/red.png");
   width: 180px;
   height: 120px;
-  margin-left: 10px;
 }
 
 .containerCardVerde {
@@ -24,7 +26,6 @@
   background-image: url("../../assets/images/verde.png");
   width: 180px;
   height: 120px;
-  margin-left: 10px;
 }
 
 .containerCardAzul {
@@ -32,7 +33,34 @@
   background-image: url("../../assets/images/azul.png");
   width: 180px;
   height: 120px;
-  margin-left: 10px;
+}
+
+.containerCardAmar1 {
+  position: relative;
+  background-image: url("../../assets/images/amarilloG.png");
+  width: 320px;
+  height: 214px;
+}
+
+.containerCardRojo1 {
+  position: relative;
+  background-image: url("../../assets/images/redG.png");
+  width: 320px;
+  height: 214px;
+}
+
+.containerCardVerde1 {
+  position: relative;
+  background-image: url("../../assets/images/verdeG.png");
+  width: 320px;
+  height: 214px;
+}
+
+.containerCardAzul1 {
+  position: relative;
+  background-image: url("../../assets/images/azulG.png");
+  width: 320px;
+  height: 214px;
 }
 
 .nombreCard {
@@ -49,10 +77,18 @@
   font-size: 21px;
 }
 
+.PositionButtonSald1 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 20px;
+}
+
 .PositionButtonSald {
-  position: absolute;
-  top: 545px;
-  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 30px;
 }
 
 .PositionButtonSald1 {
@@ -78,9 +114,6 @@
 }
 
 .ButtonQR {
-  position: absolute;
-  top: 0px;
-  right: 165px;
   border-radius: 100%;
   padding: 19px;
   background: #853ab6;
@@ -104,4 +137,22 @@
 .selected {
   border: 2px solid #a74ee0;
   border-radius: 5px;
+}
+
+.imgAgregar {
+  width: 290px;
+  height: 190px;
+  padding-left: 8px;
+}
+
+.buttonAux {
+  position: absolute;
+  top: 600px;
+  left: 940px;
+}
+
+.buttonMidScreen {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
 }

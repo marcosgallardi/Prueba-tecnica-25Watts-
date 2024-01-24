@@ -56,9 +56,8 @@ export const LoginMovil = () => {
         }
         return;
       }
-      console.log(validation);
 
-      const login = await dispatch(
+      const { login } = await dispatch(
         loginAction(formState.email, formState.password)
       );
 

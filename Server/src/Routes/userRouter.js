@@ -6,10 +6,7 @@ const userPostHandler = require("../Handlers/users/userPostHandler");
 
 const userRouter = Router();
 
-
-userRouter.post("/", userGetHandler)
-userRouter.post("/create", userPostHandler)
-
-
+userRouter.post("/", userGetHandler);
+userRouter.post("/create", userPostHandler);
 
 module.exports = userRouter;
