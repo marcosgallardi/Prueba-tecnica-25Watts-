@@ -136,7 +136,7 @@ export const LoginMovil = () => {
               size={
                 (anchoVentana >= 350) & (anchoVentana < 390)
                   ? { width: "300px", height: "40px" }
-                  : ""
+                  : "0px"
               }
             />
           </div>
