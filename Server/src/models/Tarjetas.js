@@ -4,7 +4,7 @@ module.exports = (sequelize) => {
   sequelize.define(
     "Tarjetas",
     {
-        id_tarjeta: {
+      id_tarjeta: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
@@ -24,14 +24,18 @@ module.exports = (sequelize) => {
           is: /^[a-zA-Z]{3,20}$/,
         },
       },
-      puntos:{
+      puntos: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      saldo:{
+      saldo: {
         type: DataTypes.INTEGER,
         allowNull: false,
-      }
+      },
+      color: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
     {
       timestamps: false,
