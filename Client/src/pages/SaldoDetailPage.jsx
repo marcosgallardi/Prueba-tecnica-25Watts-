@@ -1,4 +1,3 @@
-import { SaldoDetailDesktop } from "../Components/SaldoDetail/SaldoDetailDesktop";
 import { SaldoDetailMovil } from "../Components/SaldoDetail/SaldoDetailMovil";
 
 export const SaldoDetailPage = () => {
@@ -9,13 +8,7 @@ export const SaldoDetailPage = () => {
           <h3>Mis tarjetas</h3>
         </div>
 
-        <div className="d-block d-md-none">
-          <SaldoDetailMovil />
-        </div>
-
-        <div className="d-none d-lg-block">
-          <SaldoDetailDesktop />
-        </div>
+        <SaldoDetailMovil />
       </div>
     </div>
   );

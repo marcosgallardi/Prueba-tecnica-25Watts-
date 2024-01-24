@@ -29,12 +29,12 @@ export const SaldoMovil = () => {
           : styles.containerSaldo
       }>
       <h3 className={styles.textSelecciona}>Seleccioná una tarjeta</h3>
+
       <CardContainer />
+
       <div
         className={
-          (anchoVentana >= 350) & (anchoVentana < 390)
-            ? styles.PositionButtonSald1
-            : styles.PositionButtonSald
+          anchoVentana > 1200 ? styles.buttonAux : styles.PositionButtonSald
         }>
         <MainButton
           name={"Continuar"}
@@ -45,6 +45,7 @@ export const SaldoMovil = () => {
           }
         />
       </div>
+
       <div className={styles.PositionFooter}>
         <FooterBar />
       </div>

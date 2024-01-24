@@ -12,7 +12,6 @@ export const Card = ({ nombre, apellido, saldo, tickets, color }) => {
   const [selected, setSelected] = useState(initialState);
 
   const onCardSelect = (color) => {
-    console.log(color, "acac colorr");
     setSelected({
       ...selected,
       verde: false,
@@ -23,26 +22,46 @@ export const Card = ({ nombre, apellido, saldo, tickets, color }) => {
     });
   };
 
- 
+  const [anchoVentana, setAnchoVentana] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const actualizarAnchoVentana = () => {
+      setAnchoVentana(window.innerWidth);
+    };
+
+    window.addEventListener("resize", actualizarAnchoVentana);
+
+    return () => {
+      window.removeEventListener("resize", actualizarAnchoVentana);
+    };
+  }, []);
 
   const getCardClassName = (cardColor) => {
     switch (cardColor) {
       case "amarillo":
-        return `${styles.containerCardAmar} ${
-          selected.amarillo ? styles.selected : ""
-        }`;
+        return `${
+          anchoVentana > 700
+            ? styles.containerCardAmar1
+            : styles.containerCardAmar
+        } ${selected.amarillo ? styles.selected : ""}`;
       case "rojo":
-        return `${styles.containerCardRojo} ${
-          selected.rojo ? styles.selected : ""
-        }`;
+        return `${
+          anchoVentana > 700
+            ? styles.containerCardRojo1
+            : styles.containerCardRojo
+        } ${selected.rojo ? styles.selected : ""}`;
       case "verde":
-        return `${styles.containerCardVerde} ${
-          selected.verde ? styles.selected : ""
-        }`;
+        return `${
+          anchoVentana > 700
+            ? styles.containerCardVerde1
+            : styles.containerCardVerde
+        } ${selected.verde ? styles.selected : ""}`;
       case "azul":
-        return `${styles.containerCardAzul} ${
-          selected.azul ? styles.selected : ""
-        }`;
+        return `${
+          anchoVentana > 700
+            ? styles.containerCardAzul1
+            : styles.containerCardAzul
+        } ${selected.azul ? styles.selected : ""}`;
       default:
         return "";
     }
