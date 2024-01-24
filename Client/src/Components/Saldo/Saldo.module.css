@@ -2,6 +2,10 @@
   position: absolute;
   top: 125px;
 }
+.containerSaldo1 {
+  position: absolute;
+  top: 70px;
+}
 
 .containerCardAmar {
   position: relative;
@@ -56,6 +60,13 @@
 }
 
 .PositionButtonSald1 {
+  display: flex;
+  justify-content: center;
+  align-content: end;
+  padding-top: 20px;
+}
+
+.PositionButtonSald1 {
   position: absolute;
   top: 400px;
   left: 940px;
@@ -78,9 +89,6 @@
 }
 
 .ButtonQR {
-  position: absolute;
-  top: 0px;
-  right: 165px;
   border-radius: 100%;
   padding: 19px;
   background: #853ab6;

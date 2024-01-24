@@ -23,7 +23,7 @@ export const Card = ({ nombre, apellido, saldo, tickets, color }) => {
     });
   };
 
-  console.log(selected);
+ 
 
   const getCardClassName = (cardColor) => {
     switch (cardColor) {

@@ -2,15 +2,48 @@ import { CardContainer } from "./CardContainer";
 
 import styles from "./Saldo.module.css";
 import { FooterBar } from "./FooterBar";
-import { MainButtonLink } from "../MainButton/MainButtonLink";
+
+import { useEffect, useState } from "react";
+import { MainButton } from "../MainButton/MainButton";
 
 export const SaldoMovil = () => {
+  const [anchoVentana, setAnchoVentana] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const actualizarAnchoVentana = () => {
+      setAnchoVentana(window.innerWidth);
+    };
+
+    window.addEventListener("resize", actualizarAnchoVentana);
+
+    return () => {
+      window.removeEventListener("resize", actualizarAnchoVentana);
+    };
+  }, []);
+
   return (
-    <div className={styles.containerSaldo}>
+    <div
+      className={
+        (anchoVentana >= 350) & (anchoVentana < 390)
+          ? styles.containerSaldo1
+          : styles.containerSaldo
+      }>
       <h3 className={styles.textSelecciona}>Seleccioná una tarjeta</h3>
       <CardContainer />
-      <div className={styles.PositionButtonSald}>
-        <MainButtonLink name={"Continuar"} />
+      <div
+        className={
+          (anchoVentana >= 350) & (anchoVentana < 390)
+            ? styles.PositionButtonSald1
+            : styles.PositionButtonSald
+        }>
+        <MainButton
+          name={"Continuar"}
+          size={
+            (anchoVentana >= 350) & (anchoVentana < 390)
+              ? { width: "300px", height: "40px" }
+              : "0px"
+          }
+        />
       </div>
       <div className={styles.PositionFooter}>
         <FooterBar />
