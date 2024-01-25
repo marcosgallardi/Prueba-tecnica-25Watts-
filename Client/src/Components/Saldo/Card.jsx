@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Saldo.module.css";
+import { useDispatch } from "react-redux";
+import { setCardSelected } from "../../Redux/slices/cardSelectedSlice";
 
 export const Card = ({ nombre, apellido, saldo, tickets, color }) => {
   let initialState = {
@@ -9,17 +11,12 @@ export const Card = ({ nombre, apellido, saldo, tickets, color }) => {
     azul: false,
   };
 
+  const dispatch = useDispatch();
+
   const [selected, setSelected] = useState(initialState);
 
   const onCardSelect = (color) => {
-    setSelected({
-      ...selected,
-      verde: false,
-      rojo: false,
-      amarillo: false,
-      azul: false,
-      [color]: true,
-    });
+    setSelected({ ...selected, [color]: !selected[color] });
   };
 
   const [anchoVentana, setAnchoVentana] = useState(window.innerWidth);
@@ -43,29 +40,33 @@ export const Card = ({ nombre, apellido, saldo, tickets, color }) => {
           anchoVentana > 700
             ? styles.containerCardAmar1
             : styles.containerCardAmar
-        } ${selected.amarillo ? styles.selected : ""}`;
+        } ${selected.amarillo && styles.selected}`;
       case "rojo":
         return `${
           anchoVentana > 700
             ? styles.containerCardRojo1
             : styles.containerCardRojo
-        } ${selected.rojo ? styles.selected : ""}`;
+        } ${selected.rojo && styles.selected}`;
       case "verde":
         return `${
           anchoVentana > 700
             ? styles.containerCardVerde1
             : styles.containerCardVerde
-        } ${selected.verde ? styles.selected : ""}`;
+        } ${selected.verde && styles.selected}`;
       case "azul":
         return `${
           anchoVentana > 700
             ? styles.containerCardAzul1
             : styles.containerCardAzul
-        } ${selected.azul ? styles.selected : ""}`;
+        } ${selected.azul && styles.selected}`;
       default:
-        return "";
+        return null;
     }
   };
+
+  useEffect(() => {
+    dispatch(setCardSelected(selected));
+  }, [selected]);
 
   return (
     <>
@@ -75,7 +76,9 @@ export const Card = ({ nombre, apellido, saldo, tickets, color }) => {
       color === "azul" ? (
         <div
           className={getCardClassName(color)}
-          onClick={() => onCardSelect(color)}>
+          onClick={() => {
+            onCardSelect(color);
+          }}>
           <div className={styles.nombreCard}>
             <p>{`${nombre} ${"  "} ${apellido}`}</p>
           </div>

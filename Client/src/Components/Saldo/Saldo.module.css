@@ -10,56 +10,56 @@
 .containerCardAmar {
   position: relative;
   background-image: url("../../assets/images/amarillo.png");
-  width: 180px;
+  width: 186px;
   height: 120px;
 }
 
 .containerCardRojo {
   position: relative;
   background-image: url("../../assets/images/red.png");
-  width: 180px;
+  width: 186px;
   height: 120px;
 }
 
 .containerCardVerde {
   position: relative;
   background-image: url("../../assets/images/verde.png");
-  width: 180px;
+  width: 186px;
   height: 120px;
 }
 
 .containerCardAzul {
   position: relative;
   background-image: url("../../assets/images/azul.png");
-  width: 180px;
+  width: 186px;
   height: 120px;
 }
 
 .containerCardAmar1 {
   position: relative;
   background-image: url("../../assets/images/amarilloG.png");
-  width: 320px;
+  width: 326px;
   height: 214px;
 }
 
 .containerCardRojo1 {
   position: relative;
   background-image: url("../../assets/images/redG.png");
-  width: 320px;
+  width: 326px;
   height: 214px;
 }
 
 .containerCardVerde1 {
   position: relative;
   background-image: url("../../assets/images/verdeG.png");
-  width: 320px;
+  width: 326px;
   height: 214px;
 }
 
 .containerCardAzul1 {
   position: relative;
   background-image: url("../../assets/images/azulG.png");
-  width: 320px;
+  width: 326px;
   height: 214px;
 }
 
@@ -135,8 +135,8 @@
 }
 
 .selected {
-  border: 2px solid #a74ee0;
-  border-radius: 5px;
+  border: 5px solid #a74ee0;
+  border-radius: 15px;
 }
 
 .imgAgregar {

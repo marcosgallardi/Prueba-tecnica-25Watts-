@@ -5,6 +5,7 @@ import styles from "./Saldo.module.css";
 
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { MainButtonLink } from "../MainButton/MainButtonLink";
 
 export const CardContainer = () => {
   const { tarjetas } = useSelector((state) => state.login.loged);
@@ -36,11 +37,11 @@ export const CardContainer = () => {
       }>
       <div className="row d-flex justify-content-center">
         {tarjetas &&
-          tarjetas.map(({ name, lastName, saldo, puntos, color, rowIndex }) => {
+          tarjetas.map(({ name, lastName, saldo, puntos, color }) => {
             return (
-              <div className="col-5 me-3" key={rowIndex}>
+              <div className="col-5 me-3" key={name}>
                 <Card
-                  key={rowIndex}
+                  key={name}
                   nombre={name}
                   apellido={lastName}
                   saldo={saldo}
@@ -61,6 +62,21 @@ export const CardContainer = () => {
           </div>
         )}
         <div className="col-5  pt-2"></div>
+      </div>
+
+      <div
+        className={
+          anchoVentana > 1200 ? styles.buttonAux : styles.PositionButtonSald
+        }>
+        <MainButtonLink
+          name={"Continuar"}
+          linkTo="/saldoDetail/"
+          size={
+            (anchoVentana >= 350) & (anchoVentana < 390)
+              ? { width: "300px", height: "40px" }
+              : "0px"
+          }
+        />
       </div>
     </div>
   );
