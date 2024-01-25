@@ -1,11 +1,6 @@
 .containerSaldoDetail {
   position: absolute;
-  top: 125px;
-}
-
-.containerCardDetail {
-  position: absolute;
-  left: 27px;
+  top: 120px;
 }
 
 .nombreCardDetail {
@@ -22,8 +17,6 @@
   left: 227px;
 }
 
-
-
 .PositionFooter {
   position: fixed;
   bottom: 0px;
@@ -34,10 +27,10 @@
   top: 520px;
   left: 20px;
 }
-.PositionButtonSald1{
-    position: absolute;
-    top: 200px;
-    left: 820px;
+.PositionButtonSald1 {
+  position: absolute;
+  top: 200px;
+  left: 820px;
 }
 
 .containerText {
@@ -51,10 +44,9 @@
 .containerText1 {
   border: rgba(128, 128, 128, 0.315) 2px solid;
   border-radius: 15px;
-  position: absolute;
-  top: 250px;
-  left: 227px;
   width: 330px;
+  display: flex;
+  justify-content: center;
 }
 
 .imgDetail1 {
@@ -69,4 +61,27 @@
   height: 25px;
   margin-top: 10px;
   margin-right: 20px;
+}
+
+.imgCardDetail {
+  width: 380px;
+  height: 250px;
+}
+
+.imgCardDetail1 {
+  width: 300px;
+  height: 200px;
+  margin-left: 16px;
+}
+
+.PositionButtonSald15{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.backgroundImage {
+  background-image: url("../../assets/images/Fondo3.png");
+  height: 110px;
+  width: 100%;
 }

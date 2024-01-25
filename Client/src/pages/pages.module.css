@@ -3,3 +3,16 @@
   height: 110px;
   width: auto;
 }
+
+.PositionFooter {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  
+}
+
+.backgroundImage{
+  background-image: url("../assets/images/Fondo3.png");
+  height: 110px;
+  width: 100%;
+}
