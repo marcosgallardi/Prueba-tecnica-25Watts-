@@ -32,7 +32,7 @@ export const RegisterMovil = () => {
   const navigate = useNavigate();
 
   const [anchoVentana, setAnchoVentana] = useState(window.innerWidth);
-  console.log(anchoVentana);
+
   useEffect(() => {
     const actualizarAnchoVentana = () => {
       setAnchoVentana(window.innerWidth);

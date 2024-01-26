@@ -26,7 +26,7 @@ export const SaldoDetailMovil = () => {
   const filterDetail = tarjetas.filter((card) => {
     return card.color === aux[0];
   });
-
+  console.log(filterDetail);
   const [anchoVentana, setAnchoVentana] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -40,6 +40,8 @@ export const SaldoDetailMovil = () => {
       window.removeEventListener("resize", actualizarAnchoVentana);
     };
   }, []);
+
+  let id = filterDetail[0].id_tarjeta;
 
   return (
     <>
@@ -105,6 +107,7 @@ export const SaldoDetailMovil = () => {
           <MainButtonLink
             name={"Cargar saldo"}
             linkTo="/PagarPage"
+            id={filterDetail[0].id_tarjeta}
             size={
               (anchoVentana >= 350) & (anchoVentana < 390)
                 ? { width: "300px", height: "40px" }
