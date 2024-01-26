@@ -1,0 +1,21 @@
+.ButtonSugerido {
+  background-color: white;
+  border: white;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: large;
+  color: rgba(128, 128, 128, 0.729);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90px;
+  height: 50px;
+}
+.input {
+  border: none;
+  background: none;
+  font-weight: 500;
+  font-size: 40px;
+  /* Otros estilos que puedan estar presentes (puedes ajustar según tus necesidades) */
+  padding-left: 30px;
+  padding-top: 5px;
+  outline: none; /* Esto elimina el contorno predeterminado en algunos navegadores */
+}
