@@ -9,7 +9,7 @@ export const MainButtonLink = ({ name, size, linkTo, id }) => {
       style={size && { width: size.width, height: size.height }}
       type="submit"
       to={`${linkTo}/${id}`}>
-      <p className="d-flex justify-content-center pt-2 mt-1">{name}</p>
+      <p className="d-flex justify-content-center pt-1 mt-1">{name}</p>
     </Link>
   );
 };

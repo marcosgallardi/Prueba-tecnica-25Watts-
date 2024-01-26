@@ -114,7 +114,7 @@ export const SaldoDetailMovil = () => {
             linkTo="/PagarPage"
             id={id}
             size={
-              (anchoVentana >= 350) & (anchoVentana < 390)
+              anchoVentana >= 350 && anchoVentana < 390
                 ? { width: "300px", height: "40px" }
                 : "0px"
             }
