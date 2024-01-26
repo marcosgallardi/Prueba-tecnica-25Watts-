@@ -9,6 +9,17 @@ import { MainButtonLink } from "../MainButton/MainButtonLink";
 
 export const CardContainer = () => {
   const { tarjetas } = useSelector((state) => state.login.loged);
+  const { cardSelected } = useSelector((state) => state.selected);
+
+  const objetToArray = Object.values(cardSelected);
+
+  let available;
+
+  for (let i = 0; i < objetToArray.length; i++) {
+    if (objetToArray[i] === true) {
+      available = true;
+    }
+  }
 
   const [anchoVentana, setAnchoVentana] = useState(window.innerWidth);
 
@@ -23,8 +34,6 @@ export const CardContainer = () => {
       window.removeEventListener("resize", actualizarAnchoVentana);
     };
   }, []);
-
-  console.log(tarjetas);
 
   return (
     <div
@@ -70,7 +79,7 @@ export const CardContainer = () => {
         }>
         <MainButtonLink
           name={"Continuar"}
-          linkTo="/saldoDetail/"
+          linkTo={available && "/saldoDetail/"}
           size={
             (anchoVentana >= 350) & (anchoVentana < 390)
               ? { width: "300px", height: "40px" }

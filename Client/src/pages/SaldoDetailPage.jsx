@@ -19,7 +19,7 @@ export const SaldoDetailPage = () => {
     };
   }, []);
   return (
-    <>
+    <di>
       {anchoVentana > 1200 && <div className={styles.backgroundImage}></div>}
       <div className="d-flex justify-content-between align-items-center ">
         <div className="pt-5 ps-2">
@@ -34,13 +34,13 @@ export const SaldoDetailPage = () => {
           }>
           Mis tarjetas
         </h3>
-        <div className="div"></div>
-
+        <div className=""></div>
         <SaldoDetailMovil />
+
         <div className={styles.PositionFooter}>
           <FooterBar />
         </div>
       </div>
-    </>
+    </di>
   );
 };

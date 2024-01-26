@@ -8,7 +8,7 @@ export const loginAction = (email, password) => async (dispatch) => {
       email,
       password,
     });
-    
+
     dispatch(setLogin(data));
     return data;
   } catch (error) {

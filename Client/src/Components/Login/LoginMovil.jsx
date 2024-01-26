@@ -42,7 +42,7 @@ export const LoginMovil = () => {
         alert("Todos los campos son obligatorios");
         return;
       }
-      console.log(validation);
+
       if (
         validation.email === "Dirección de email incorrecta" ||
         validation.password ===
