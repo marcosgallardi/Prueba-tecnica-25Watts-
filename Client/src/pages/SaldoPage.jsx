@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { SaldoMovil } from "../Components/Saldo";
+import { ButtonBack } from "../Components/MainButton/ButtonBack";
 
 export const SaldoPage = () => {
   const [anchoVentana, setAnchoVentana] = useState(window.innerWidth);
@@ -17,14 +18,17 @@ export const SaldoPage = () => {
   }, []);
 
   return (
-    <div className="position-relative vh-100">
-      <div className="position-absolute top-0 start-50 translate-middle-x">
-        {(anchoVentana >= 350) & (anchoVentana < 390) ? (
-          <h5 className="pt-3">Mis tarjetas</h5>
-        ) : (
-          <h3 className="pt-5">Mis tarjetas</h3>
-        )}
+    <div className="d-flex justify-content-between align-items-center">
+      <div className="pt-5 ps-3">
+        <ButtonBack path={"/login"} />
       </div>
+
+      {(anchoVentana >= 350) & (anchoVentana < 390) ? (
+        <h5 className="pt-3">Mis tarjetas</h5>
+      ) : (
+        <h3 className="pt-5">Mis tarjetas</h3>
+      )}
+      <div className="div"></div>
 
       <SaldoMovil />
     </div>
