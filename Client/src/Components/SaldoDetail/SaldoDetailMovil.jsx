@@ -26,7 +26,7 @@ export const SaldoDetailMovil = () => {
   const filterDetail = tarjetas.filter((card) => {
     return card.color === aux[0];
   });
-  console.log(filterDetail);
+
   const [anchoVentana, setAnchoVentana] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -42,14 +42,19 @@ export const SaldoDetailMovil = () => {
   }, []);
 
   let id = filterDetail[0].id_tarjeta;
+  console.log(id, "id saldoooooooo");
 
   return (
     <>
       <div
-        className={`${styles.containerSaldoDetail} ${
-          anchoVentana > 750 && anchoVentana < 1100 ? "mt-5" : "mt-3"
-        }`}>
-        <div className={styles.containerCardDetail}>
+        className={
+          anchoVentana > 1200
+            ? styles.containerSaldoDetail
+            : anchoVentana < 450 && anchoVentana > 350
+            ? styles.containerSaldoDetail2
+            : styles.containerSaldoDetail1
+        }>
+        <div className="d-flex justify-content-center">
           <img
             src={(() => {
               switch (filterDetail[0].color) {
@@ -107,7 +112,7 @@ export const SaldoDetailMovil = () => {
           <MainButtonLink
             name={"Cargar saldo"}
             linkTo="/PagarPage"
-            id={filterDetail[0].id_tarjeta}
+            id={id}
             size={
               (anchoVentana >= 350) & (anchoVentana < 390)
                 ? { width: "300px", height: "40px" }
